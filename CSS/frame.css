@@ -1,0 +1,21 @@
+#Frame {
+    margin-top: 2vh;
+    width: 90%;
+    height: 135%;
+}
+
+#myIframe{
+    margin-top: 2vh;
+    width: 85%;
+    height: 660px;
+    border: none;
+}
+
+@media (max-width: 1300px){
+    #Frame {
+        margin-top: 2vh;
+        width: 100%;
+        height: 130%;
+    }
+    
+}

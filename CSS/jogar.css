@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+body {
+    overflow: hidden;
+}
+
+#logo {
+    width: 400px;
+    height: 400px;
+    margin-top: -50px;
+}
+
+.centralizar {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.proximo {
+    margin: 0 auto !important;
+    font-family: "Cambo", serif !important;
+    font-weight: bold !important;
+    width: 190px !important;
+    height: 70px !important;
+    font-size: 24px !important;
+}
+
+h1 {
+    font-weight: bolder;
+    font-family: "Special Elite", system-ui;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.textoSobre {
+    font-size: 20px !important;
+    font-weight: bold;
+    font-family: "Special Elite", system-ui;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.titulo-principal {
+    max-width: fit-content;
+    margin: 60px auto;
+    color: #000;
+}
+
+.titulo-principal:after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+
+/* Animação aplicada ao content referente a classe *.titulo-principal* resultando num efeito de cursor piscando. */
+
+@keyframes pisca {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.container_cards {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+
+.parte {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.parte:nth-child(3) {
+    flex-basis: 100%;
+}
+
+#parte1 {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+#parte2 {
+    flex: 10;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+#parte3 {
+    display: flex;
+    margin-top: -10px;
+    justify-content: center;
+}
+
+#card_img {
+    height: 300px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+#pais_img {
+    margin: 0 !important;
+    height: 55px;
+    width: 90px;
+    margin-left: 10px !important;
+}
+
+#nome {
+    font-size: 35px;
+    font-family: 'Calistoga', sans-serif;
+}
+
+#texto {
+    margin: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Special Elite", system-ui;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.botao-imagem {
+    background-color: #00000000;
+    border: none;
+    cursor: pointer;
+}
+
+#button_img {
+    width: 50px;
+}
+
+.botao_escolha {
+    font-family: 'Calistoga', sans-serif;
+    width: 9.5rem;
+    height: 3rem;
+    background: #005280;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    color: #DDD1AC;
+    display: block;
+    margin: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao_escolha:hover {
+    background: #00283F;
+    color: #DDD1AC;
+}
+
+.comparsa {
+    background: #b66624;
+}
+
+.infeliz {
+    background: #8a5a01;
+}
+
+.comparsa:hover {
+    background: rgb(87, 87, 87);
+}
+
+.infeliz:hover {
+    background: rgb(87, 87, 87);
+}
+
+.parte4 {
+    margin: 0 auto !important;
+    width: fit-content;
+    height: 8rem;
+    background: #D9D9D9;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    display: flex;
+    margin: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+#agencia_pontuacao {
+    margin-top: 0px;
+    font-family: 'Calistoga', sans-serif;
+    font-weight: bold;
+}
+
+#texto_pontuacao {
+    margin-top: -15px;
+    font-family: 'Calistoga', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cards_selecionados {
+    transition: transform 0.3s ease, top 0.3s ease;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.cards_selecionados:hover {
+    transform: scale(2);
+    top: -1rem;
+    /* Ajuste este valor conforme necessário */
+    position: relative;
+    z-index: 1000;
+}
+
+.cards_comparsas {
+    background-color: #b66624;
+}
+
+.cards_infelizes {
+    background-color: #8a5a01;
+}
+
+.cards_passados {
+    background-color: #005280;
+}
+
+#display {
+    display: flex;
+}
+
+#contador_de_vidas {
+    font-family: 'Calistoga', sans-serif;
+    width: 9rem;
+    height: 2.5rem;
+    background: #bebebe;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    margin: 5px;
+    display: block;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+
+#contador_de_cartas {
+    font-family: 'Calistoga', sans-serif;
+    width: 9rem;
+    height: 2.5rem;
+    background: #bebebe;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    color: #000000;
+    margin: 5px;
+    display: block;
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+}
+
+#Heart {
+    width: 30px;
+    margin-top: 5px;
+}
+
+#texto_cont {
+    margin-top: 10px;
+}
+
+.resultado_img {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.card_resultado {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 20px;
+    height: 165px;
+    display: flex;
+}
+
+.Titulo_resultado {
+    font-family: 'Special Elite', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: white;
+
+    /* Vertical text styling */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.image-container:hover {
+    transform: scale(1.15);
+    z-index: 999999;
+}
+
+.image-container {
+    display: flex;
+    position: relative;
+    width: fit-content;
+}
+
+.resultado_comparsas {
+    background-color: #b66624;
+}
+
+.resultado_infelizes {
+    background-color: #8a5a01;
+}
+
+.resultado_passados {
+    background-color: #005280;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+.respostaElement {
+    position: absolute;
+    width: calc(100% - 5px);
+    ;
+    height: 50px;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 115px !important;
+}
+
+.acerto {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white !important;
+    background-image: linear-gradient(transparent, green);
+}
+
+.erro {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white !important;
+    background-image: linear-gradient(transparent, red);
+}
+
+.btn_avancar {
+    font-family: 'Calistoga', sans-serif;
+    width: 9.5rem;
+    height: 2rem;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    color: #DDD1AC;
+    display: block;
+    margin-top: 5px !important;
+    margin: 0 auto;
+    cursor: pointer;
+    background-color: #005280;
+}
+
+.btn_gabarito {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 5px);
+    height: 100%;
+    margin-left: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    /* Cor do texto */
+    background-color: transparent;
+    z-index: 99999;
+    border: none;
+}
+
+.btn_gabarito:hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 5px);
+    ;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Exemplo de fundo semi-transparente */
+    color: white;
+    /* Cor do texto */
+    z-index: 99999;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    z-index: 999999;
+    overflow: hidden;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #DDD1AC;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 5px solid #6A4930;
+    font-family: "Special Elite", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #6A4930;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.alignCenter {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body_pagina_Resultado {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina_Resultado {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    margin-left: 20px;
+}
+
+.pagina_Resultado p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: justify;
+}
+
+.pagina_Resultado::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #ffffff transparent transparent;
+}
+
+.body_pagina_Resultado img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background-color: rgb(255, 226, 203);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 805px) {
+    .body_pagina_Resultado img {
+        width: 60px !important;
+        height: auto;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.btn_home {
+    margin: 10px auto !important;
+    font-family: 'Calistoga', sans-serif !important;
+    width: 9.5rem;
+    height: 2rem;
+    font-weight: bold;
+    background: #005280;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    color: #DDD1AC;
+    display: block;
+    cursor: pointer;
+}
+
+.txt_resultado {
+    font-weight: bold;
+}
+
+.swal2-popup {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fonte clássica */
+    background-color: #f4e9dc;
+    /* Cor de fundo pálida */
+    border-radius: 30px;
+}
+
+.swal2-title {
+    color: #795548;
+    /* Cor marrom */
+}
+
+.swal2-container {
+    background-color: transparent !important;
+    height: fit-content;
+}
+
+#info-title {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: medium;
+    color: black;
+}
+
+.flip-image {
+    height: auto;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-image.flip {
+    transform: rotateY(180deg);
+}

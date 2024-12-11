@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Cambo&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calistoga&display=swap">
+    <link rel="stylesheet" href="../CSS/buttons.css">
+    <link rel="stylesheet" href="../CSS/EstiloFundo.css">
+    <link rel="stylesheet" href="../CSS/frame.css">
+    <link rel="stylesheet" href="../CSS/SobreAgencias.css">
+    <link rel="icon" href="../imgs/CartaMarcadaIcon.png" type="image/png">
+    <script src="../JavaScript/som_jogo.js" type="module" defer></script>
+    <script src="../JavaScript/popup.js" type="module" defer></script>
+    <script src="../JavaScript/sortear_agencia.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Carta Marcada</title>
+</head>
+
+<body class="body">
+    <div class="divEsquerda">
+        <audio class="music-sound sound" src="../Sounds/musicadojogo.mp3" autoplay loop></audio>
+        <img src="../imgs/LogoCartaMarcada.png" class="logoEsquerda" alt="LogoCartaMarcada">
+        <!--<p><a href="../index.html"><button class="buttonVoltar">Voltar</button></a>-->
+        <div class="Sound-group">
+            <h3 class="Texto_volume">Volume:
+            <input type="range" min="0" max="1" step="0.1" value="1" id="volume-slider"></h3>
+            <button class="Som Mudo" id="botao-som">
+                <img id="imagem-som" class="soundbutton" src="../imgs/Sound.png" width="50" height="50" alt="Imagem Som">
+            </button>            
+            <button class="SobreAgencias btn_SobreAgencias_jogar">Sobre as Agências</button>
+            <button class="SobreAgencias ComoJogar_play">Como Jogar</button>
+        </div>
+    </div>
+    <div class="divDireita">
+        <div id="iframeContainer">
+        </div>
+        <iframe scrolling="yes" frameborder="0" id="Frame" src="Jogar.html"></iframe>
+    </div>
+    <img src="../imgs/LogoAffectGames.png" class="logoAffectGames" alt="LogoAffectGames">
+</body>
+
+</html>

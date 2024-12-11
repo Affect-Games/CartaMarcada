@@ -1,0 +1,19 @@
+.swal2-container {
+    background-color: white !important;
+}
+
+/* Inicialmente escondemos o conteúdo da página */
+#conteudo {
+    display: none;
+}
+
+/* O vídeo será exibido em tela cheia */
+#video_aviso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+}
